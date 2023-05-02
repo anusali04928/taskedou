@@ -1,0 +1,6 @@
+package com.example.taskedou
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
