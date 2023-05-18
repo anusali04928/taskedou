@@ -11,25 +11,26 @@ class TasksView extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            'Taskedou',
-            style: TextStyle(fontSize: 24),
-          ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Taskedou',
+          style: TextStyle(fontSize: 24),
         ),
-        body: Column(
-          children: [
-            TaskList(
-              size: size,
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(
-                  size.width * 0.02, 0, 0, size.height * 0.02),
-              child: TaskAdd(
-                  size: size, textEditingController: _textEditingController),
-            ),
-          ],
-        ));
+      ),
+      body: Column(
+        children: [
+          TaskList(
+            size: size,
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(
+                size.width * 0.02, 0, 0, size.height * 0.02),
+            child: TaskAdd(
+                size: size, textEditingController: _textEditingController),
+          ),
+        ],
+      )
+    );
   }
 }

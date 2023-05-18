@@ -28,7 +28,7 @@ class TaskAdd extends StatelessWidget {
               controller: _textEditingController,
               autofocus: true,
               decoration: const InputDecoration(
-                hintText: 'e.g. Buy Milk',
+                hintText: 'add task',
               ),
             ),
           ),
@@ -36,7 +36,7 @@ class TaskAdd extends StatelessWidget {
             style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 padding: const EdgeInsets.all(16.0),
-                backgroundColor: MyTheme.icon1),
+                backgroundColor: MyTheme.color4),
             child: tasksViewModel.onclick
                 ? const Icon(Icons.arrow_upward)
                 : const Icon(Icons.add),

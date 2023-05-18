@@ -4,12 +4,18 @@ import 'package:taskedou/models/tasks.dart';
 
 class TasksViewModel extends ChangeNotifier {
   final List<Task> _tasks = [];
+ 
 
   List<Task> get tasks => _tasks;
 
   bool onclick = false;
 
   void addTask(String taskName) {
+    _tasks.add(Task(taskName));
+    notifyListeners();
+  }
+
+  void addList(String taskName) {
     _tasks.add(Task(taskName));
     notifyListeners();
   }
@@ -26,6 +32,7 @@ class TasksViewModel extends ChangeNotifier {
 
   void toggleTask(int index) {
     _tasks[index].toggleDone();
+
     notifyListeners();
   }
 
